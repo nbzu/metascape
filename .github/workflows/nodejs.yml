@@ -10,8 +10,19 @@ jobs:
     - uses: actions/setup-node@v1
     - run: npm install puppeteer
     - run: node metascape/index.js
-    - run: ls
     - uses: actions/upload-artifact@v1
       with:
         name: metascape
-        path: output/
+        path: output
+
+  genecards:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+    - run: pip install scrapy
+    - run: sh genecards/test.sh
+    - uses: actions/upload-artifact@v1
+      with:
+        name: genecards
+        path: result.csv

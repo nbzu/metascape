@@ -17,7 +17,7 @@ let input = null;
 
   await page.waitForXPath('//input[@type="file"]').then(
         async input=>{
-            await input.uploadFile('input/input.csv')
+            await input.uploadFile('input/metascape.csv')
             await input.evaluate(upload => {
                 upload.dispatchEvent(new Event('change', { bubbles: true }))
             });
