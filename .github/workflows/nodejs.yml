@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v1
-    - run: pip install scrapy
+    - run: pip install scrapy pandas
     - run: cd genecards && sh test.sh
     - uses: actions/upload-artifact@v1
       with:
