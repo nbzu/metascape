@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('http://www.google.com');
-  await page.pdf({path: 'output/hn.pdf', format: 'A4'});
+  await page.pdf({path: 'hn.pdf', format: 'A4'});
  
   await browser.close();
 })();
