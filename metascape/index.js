@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 let page = null;
 let input = null;
 (async () => {
-  const browser = await puppeteer.launch({ headless: false});
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('http://metascape.org/gp/index.html#/main/step1');
 
