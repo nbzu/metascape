@@ -10,6 +10,7 @@ jobs:
     - uses: actions/setup-node@v1
     - run: npm install puppeteer
     - run: node test.js
+    - run: ls
     - uses: actions/upload-artifact@v1
       with:
       name: my-artifact
