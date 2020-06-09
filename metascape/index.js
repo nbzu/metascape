@@ -24,6 +24,8 @@ let input = null;
         }
     );
 
+  await page.waitFor(60*1000)
+
   await page.waitForSelector('body > div:nth-child(3) > div > div:nth-child(1) > div.col-md-7.ng-scope > div > table > tbody > tr:nth-child(2) > td.info > div > table > tbody > tr:nth-child(1) > td:nth-child(2)',{visible: true}).then(
         async select=>{
             await select.click()
