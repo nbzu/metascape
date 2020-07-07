@@ -42,7 +42,7 @@ let input = null;
         }
     );
 
-  await page.waitFor(60*5*1000)
+  await page.waitFor(60*20*1000)
   await page.waitForSelector('body > div:nth-child(3) > div > div:nth-child(1) > div.col-md-7.ng-scope > div > table > tbody > tr:nth-child(3) > td.info > div:nth-child(2) > div:nth-child(2) > button',{visible: true}).then(
         async select=>{
             await select.click()
