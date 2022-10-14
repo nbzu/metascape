@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
     - run: npm install puppeteer
     - run: node metascape/index.js
     - uses: actions/upload-artifact@v1
