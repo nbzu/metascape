@@ -24,7 +24,7 @@ let input = null;
         }
     );
 
-  await page.waitFor(60*1000)
+  await page.waitForTimeout(60*1000)
 
   await page.waitForSelector('body > div:nth-child(3) > div > div:nth-child(1) > div.col-md-7.ng-scope > div > table > tbody > tr:nth-child(2) > td.info > div > table > tbody > tr:nth-child(1) > td:nth-child(2)',{visible: true}).then(
         async select=>{
@@ -42,13 +42,13 @@ let input = null;
         }
     );
 
-  await page.waitFor(60*20*1000)
+  await page.waitForTimeout(60*20*1000)
   await page.waitForSelector('body > div:nth-child(3) > div > div:nth-child(1) > div.col-md-7.ng-scope > div > table > tbody > tr:nth-child(3) > td.info > div:nth-child(2) > div:nth-child(2) > button',{visible: true}).then(
         async select=>{
             await select.click()
         }
     );
-  await page.waitFor(10*1*1000)
+  await page.waitForTimeout(10*1*1000)
   const pages = await browser.pages()
   const reportfinal = pages[pages.length - 1];
 
